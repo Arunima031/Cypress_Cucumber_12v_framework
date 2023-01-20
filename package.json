@@ -1,0 +1,29 @@
+{
+  "name": "cypress12-cucumber",
+  "version": "1.0.0",
+  "description": "bdd with cypress 12",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Cypress",
+    "BDD",
+    "Cucumber"
+  ],
+  "author": "Aniket",
+  "license": "ISC",
+  "dependencies": {
+    "cosmiconfig": "^8.0.0",
+    "cypress": "^12.3.0"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.1",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "@cypress/xpath": "^2.0.3",
+    "@esbuild-plugins/node-modules-polyfill": "^0.1.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/common/**/*.{js,ts}"
+  }
+}
