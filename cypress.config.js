@@ -25,6 +25,8 @@ await addCucumberPreprocessorPlugin(on, config);
 
 return config;
 },
-
+env:{
+  ENV:"qa"
+}
 },
 });
