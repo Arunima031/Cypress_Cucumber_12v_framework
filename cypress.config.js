@@ -27,6 +27,7 @@ return config;
 },
 env:{
   ENV:"qa"
-}
+},
+defaultCommandTimeout:10000
 },
 });
