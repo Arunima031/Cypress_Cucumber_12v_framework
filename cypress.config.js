@@ -5,6 +5,9 @@ const createEsbuildPlugin =
 require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
 const nodePolyfills =
   require('@esbuild-plugins/node-modules-polyfill').NodeModulesPolyfillPlugin
+  const allureWriter = require('@shelex/cypress-allure-plugin/writer');
+
+
 module.exports = defineConfig({
   
 
@@ -22,11 +25,17 @@ plugins: [nodePolyfills(), createEsbuildPlugin(config)],
 
 on("file:preprocessor", bundler);
 await addCucumberPreprocessorPlugin(on, config);
+allureWriter(on, config);
+
 
 return config;
 },
 env:{
-  ENV:"qa"
+  ENV:"qa",
+  allureReuseAfterSpec: true,
+  allure:true,
+ 
+  
 },
 defaultCommandTimeout:10000
 },

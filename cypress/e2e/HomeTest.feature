@@ -2,6 +2,8 @@ Feature: Home Page
 
 Background:
 Given I navigate to the Website
+
+@Sanity
 Scenario: I want to verify content in Home Page
 Then Validate the menus in home page
 
@@ -9,6 +11,8 @@ Then Validate the menus in home page
 | Home |
 | Blogs |
 | Contact Us |
+
+@Smoke
 Scenario: I want to validate title of home page
 Then Validate the title after login
 | title |

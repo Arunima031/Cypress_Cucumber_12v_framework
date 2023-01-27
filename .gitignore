@@ -1,1 +1,6 @@
 /temp
+allure-report/
+allure-results/
+node_modules/
+package-lock.json/
+package,json/

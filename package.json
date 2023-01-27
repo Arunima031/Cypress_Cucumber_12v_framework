@@ -5,14 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run --browser chrome --headed",
-    "headless":"npx cypress run"
+    "withReport": "npx cypress run --headless",
+    "allure:report": "allure generate allure-results --clean -o allure-report",
+    "allure:final": "allure generate allure-results --clean -o allure-report && allure open",
+    "runWithReport": " npm run withReport && npm run allure:final"
   },
   "keywords": [
     "Cypress",
     "BDD",
     "Cucumber"
   ],
-  "author": "Aniket",
+  "author": "Arunima",
   "license": "ISC",
   "dependencies": {
     "cosmiconfig": "^8.0.0",
@@ -22,7 +25,8 @@
     "@badeball/cypress-cucumber-preprocessor": "^15.1.1",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
     "@cypress/xpath": "^2.0.3",
-    "@esbuild-plugins/node-modules-polyfill": "^0.1.4"
+    "@esbuild-plugins/node-modules-polyfill": "^0.1.4",
+    "@shelex/cypress-allure-plugin": "^2.34.0"
   },
   "cypress-cucumber-preprocessor": {
     "stepDefinitions": "cypress/e2e/common/**/*.{js,ts}"

@@ -2,7 +2,7 @@ Feature: Search item 13
 
 Background:
 Given I navigate to the am website
-
+   @Smoke
    Scenario: search item in amazon website
       Then I land on Homepage
       When I search for "iPhone 13"
