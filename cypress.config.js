@@ -34,6 +34,7 @@ env:{
   ENV:"qa",
   allureReuseAfterSpec: true,
   allure:true,
+  
  
   
 },

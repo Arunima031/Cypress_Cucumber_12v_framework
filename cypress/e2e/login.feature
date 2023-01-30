@@ -15,4 +15,4 @@ Scenario: Invalid Login
 Given @navigation I open the website
 When @login I add username and password from json "testData" 
 When @login I click on login button
-Then @login I validate error from json "ValidationStatement"
+Then @login I validate error from json "ValidationStatemen"
