@@ -7,5 +7,6 @@ Given I navigate to the am website
       Then I land on Homepage
       When I search for "iPhone 13"
       Then I validate search text
+      Then I click on first product link
       # And @api I run fake API
       

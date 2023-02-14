@@ -74,3 +74,8 @@ Then('I validate search text', function () {
   homePage.getSearchText().should('be.visible')
   homePage.getSearchText().should('have.text', '"' + searchtext + '"')
 })
+
+Then("I click on first product link",function(){
+  searchPage.getFisrtProduct().invoke('removeAttr','target').click()
+
+})

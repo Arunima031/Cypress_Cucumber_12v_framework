@@ -4,11 +4,12 @@
   "description": "bdd with cypress 12",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run --browser chrome --headed",
+    "test": "npx cypress run --browser chrome --headless",
     "withReport": "npx cypress run --env \"TAGS=@Smoke\" --browser chrome --headless ",
     "allure:report": "allure generate allure-results --clean -o allure-report",
     "allure:final": "allure generate allure-results --clean -o allure-report && allure open",
-    "runWithReport": " npm run withReport && npm run allure:final"
+    "runWithReport": " npm run withReport && npm run allure:final",
+    "allure:clean":"allure generate --clean"
   },
   "keywords": [
     "Cypress",
